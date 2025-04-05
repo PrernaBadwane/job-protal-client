@@ -1,3 +1,7 @@
+
+"use client"; 
+
+import { useRouter } from "next/navigation";
 import { ICONS } from "../../assets";
 import Image from "next/image";
 
@@ -6,8 +10,15 @@ interface AuthHeadingProps {
 }
 
 const AuthHeading = ({ heading }: AuthHeadingProps) => {
+  const router=useRouter();
+
+  // navigate to home page on logo click
+  const handleClick = () => {
+  router.push("/");
+  };
+
   return (
-    <div className="flex flex-row items-center justify-start gap-5 w-full ">
+    <div onClick={handleClick} className="flex flex-row items-center justify-start gap-5 w-full ">
       <Image
         src={ICONS.horizon}
         alt="Logo"
