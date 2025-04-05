@@ -1,4 +1,4 @@
-import { VIDEOS } from "@/assets";
+import { VIDEOS } from "../../assets";
 import Container from "@/Components/Shared/Container/Container";
 import React, { ReactNode } from "react";
 
