@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-export const CommonLayout = () => {
+const CommonLayout = ({children}:{children:ReactNode}) => {
   return (
-    <div>layout</div>
+    <div>{children} </div>
   )
 }
+
+export default CommonLayout
